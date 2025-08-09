@@ -1,39 +1,40 @@
-FUTURE_CS_02
-This repository documents a cybersecurity intern-led SOC analysis using Elastic Stack (Kibana, Elasticsearch, Logstash) and Kali Linux. It includes monitoring security alerts, potential threats analysis, and incident response.
+Task 2: SOC Monitoring & Incident Response (Splunk)
 
-Tools Used
-Elastic Stack (Kibana, Elasticsearch)
-Kali Linux
-Sample Log Files
-MS Word (for reporting)
-Key Features
-Real-time log analysis via Kibana Discover
-Detection of malware (Trojan, Rootkit)
-Login failure tracking and brute-force detection
-Connection attempt monitoring
-Alert severity classification
-Incident Timeline
-Timestamp	User	IP Address	Action	Threat	Severity
-08:30:14	bob	10.0.0.5	malware detected	Trojan Detected	High
-05:30:14	alice	198.51.100.42	malware detected	Rootkit Signature	High
-07:18:14	bob	172.16.0.3	login failed	-	Medium
-05:27:14	charlie	198.51.100.42	login failed	-	Medium
-08:31:14	david	10.0.0.5	connection attempt	-	Low
-Recommendations
-Isolate infected hosts
-Trigger endpoint malware scans
-Audit user credentials
-Monitor flagged IP ranges
-Notification Plan
-Alert SOC Lead
-Share report with IT Security Manager
-Prepare containment instructions
-Dashboard Screenshots
-Include screenshot of:
+Objective: Monitor simulated logs, identify 3–5 suspicious alerts, classify severity, and produce an incident report with dashboard evidence.
 
-Filtered Threats and actions
-Alert visualizations
-Severity breakdowns
+Tools: Splunk Enterprise (Free/Trial), provided sample logs.
+
+Method:
+
+Ingested SOC_Task2_Sample_Logs.txt via Add Data > Upload.
+
+Searched for failed logins, malware events, success-after-fail sequences.
+
+Built dashboard panels (failed logins over time, top source IPs, malware by host).
+
+Key Findings (examples—replace with your actuals):
+
+High: Brute-force pattern (EventCode 4625) from <IP> targeting <user>.
+
+High: Malware detection “<signature>” on <host>.
+
+Medium: Successful login after multiple failures for <user> from <IP>.
+
+Deliverables:
+
+Incident_Response_Report_Task2.pdf (timeline, analysis, remediation)
+
+screenshots/ (dashboard + searches)
+
+searches.md (SPL used)
+
+alert_log.md (classification table)
+
+Example SPL (see searches.md for full):
+
+failed OR "failed login" OR failure | stats count by src_ip, user | sort - count
+
+… (bursts over time, success-after-fail correlation, malware terms)
 🧠 Developer
 Bhaskar Pagadala
 📍Hyderabad India
