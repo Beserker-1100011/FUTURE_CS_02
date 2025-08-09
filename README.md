@@ -64,7 +64,7 @@ Not intended for production or commercial use.
 ### 🔗 Connect with Me
 If you’d like to discuss SOC operations, Splunk usage, or cybersecurity in general:
 - **LinkedIn:** [Your LinkedIn Profile](#)
-- **Email:** [your.email@example.com](#)
+- **Email:** [pagadalabhaskar99@gmail.com](#)
 
 ---
 r time, success-after-fail correlation, malware terms)
