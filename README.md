@@ -1,40 +1,73 @@
-Task 2: SOC Monitoring & Incident Response (Splunk)
+# 🛡️ Security Alert Monitoring & Incident Response (Splunk Enterprise Edition)
 
-Objective: Monitor simulated logs, identify 3–5 suspicious alerts, classify severity, and produce an incident report with dashboard evidence.
+## 📌 Overview
+This repository documents my work on **Task 2: Security Alert Monitoring & Incident Response** as part of my internship with **Future Interns**.  
+The project simulates a **Security Operations Center (SOC)** environment using **Splunk Enterprise Edition**, focusing on real-time alert monitoring, threat detection, and incident handling.
 
-Tools: Splunk Enterprise (Free/Trial), provided sample logs.
+---
 
-Method:
+## 🎯 Objectives
+- Simulate real-world SOC workflows.
+- Monitor system and network activity for suspicious behavior.
+- Detect and investigate potential security incidents.
+- Apply structured incident response methodologies.
+- Prepare clear, actionable reports for stakeholders.
 
-Ingested SOC_Task2_Sample_Logs.txt via Add Data > Upload.
+---
 
-Searched for failed logins, malware events, success-after-fail sequences.
+## 🛠️ Tools & Technologies
+- **Splunk Enterprise Edition** (Search Processing Language, Dashboards, Alerting)
+- Simulated SIEM setup with real-world log formats
+- Threat Intelligence Feeds
 
-Built dashboard panels (failed logins over time, top source IPs, malware by host).
+---
 
-Key Findings (examples—replace with your actuals):
+## 📈 Key Activities
+- **Real-Time Monitoring:** Tracked and visualized live network/system activity through Splunk dashboards.
+- **Threat Detection:** Identified brute-force attempts, malicious logins, and suspicious endpoint behaviors.
+- **Root Cause Analysis:** Correlated logs from different sources and leveraged threat intel for deeper investigation.
+- **Incident Response:** Executed containment, eradication, and recovery strategies.
+- **Reporting:** Documented technical findings and recommended security measures.
 
-High: Brute-force pattern (EventCode 4625) from <IP> targeting <user>.
+---
 
-High: Malware detection “<signature>” on <host>.
+## 💡 Key Learnings
+- Effective **alert triage** and prioritization.
+- Understanding common **adversary tactics and techniques**.
+- Hands-on experience with **log analysis & forensic investigation**.
+- Converting technical results into **clear communication** for SOC teams.
 
-Medium: Successful login after multiple failures for <user> from <IP>.
+---
 
-Deliverables:
+## 🧠 Skills Gained
+- Alert Prioritization
+- Threat Analysis & Investigation
+- Incident Lifecycle Management
+- Cybersecurity Reporting & Documentation
 
-Incident_Response_Report_Task2.pdf (timeline, analysis, remediation)
+---
 
-screenshots/ (dashboard + searches)
+## 📂 Repository Contents
+- **Incident_Report.pdf** → Detailed write-up of investigation steps, findings, and recommendations.
+- **Search_Queries.spl** → Splunk SPL queries used during the investigation.
+- **Dashboard_Screenshots/** → Visual evidence of monitoring and detection.
+- **Logs/** → Sample anonymized log data used in analysis.
 
-searches.md (SPL used)
+---
 
-alert_log.md (classification table)
+## 📜 License
+This project is for **educational and demonstration purposes only**.  
+Not intended for production or commercial use.
 
-Example SPL (see searches.md for full):
+---
 
-failed OR "failed login" OR failure | stats count by src_ip, user | sort - count
+### 🔗 Connect with Me
+If you’d like to discuss SOC operations, Splunk usage, or cybersecurity in general:
+- **LinkedIn:** [Your LinkedIn Profile](#)
+- **Email:** [your.email@example.com](#)
 
-… (bursts over time, success-after-fail correlation, malware terms)
+---
+r time, success-after-fail correlation, malware terms)
 
 🧠 Developer
 Bhaskar Pagadala
