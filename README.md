@@ -35,6 +35,8 @@ Example SPL (see searches.md for full):
 failed OR "failed login" OR failure | stats count by src_ip, user | sort - count
 
 … (bursts over time, success-after-fail correlation, malware terms)
+
 🧠 Developer
 Bhaskar Pagadala
+
 📍Hyderabad India
